@@ -1,0 +1,21 @@
+body {
+    background-color: #ffe5b4;
+    margin: auto;
+    max-width:1040px;
+}
+
+.button {
+    margin: 20px 10px;
+    border: 2px outset gray;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.button_active {
+    background: gray;
+    color: white;
+}
+
+.image {
+    margin: 10px;
+}
