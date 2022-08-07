@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import IconSwitch from "./IconSwitch";
 import CardsView from "./CardsView";
 import ListView from "./ListView";
+import "../../assets/layouts/css/layouts.css";
 
 function Store() {
-  const [view, setView] = useState("view_module");
+  let [view, setView] = useState("view_module");
   const products = [
     {
       name: "Nike Metcon 2",
@@ -45,18 +46,17 @@ function Store() {
   ];
 
   const switchView = () => {
-    console.log("change state here");
-    view = (view === "view_module" ? "view_list" : "view_module"); 
-    console.log(view);
-  }
+    setView(view === "view_module" ? "view_list" : "view_module");
+  };
   return (
     <div>
-      <IconSwitch
-        icon = {view === <CardsView /> ? "view_module" : "view_list"}
-        onSwitch = {switchView}
-      />
-
-      {view === "view_module" ? <CardsView cards={products} /> : <ListView items = {products}/>}
+      <header>
+        <IconSwitch icon={view} onSwitch={switchView} />
+      </header>
+      {view === "view_module" ?
+        <CardsView cards={products} /> : 
+        <ListView items={products} />
+      }
     </div>
   );
 }

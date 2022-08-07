@@ -93,7 +93,7 @@ class Portfolio extends React.Component {
   }
   render() {
     return (
-      <div className="container">
+      <div>
         <Toolbar
           filters={this.filters}
           selected={this.state.selected}
