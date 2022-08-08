@@ -5,8 +5,8 @@ import Dropdown from './components/dropdown/Dropdown';
 import "./App.css"
 
 function App() {
-  const [app, setApp] = useState(<Dropdown />);
-  const [currentClass, setCurrentClass] = useState("dropdown");
+  const [app, setApp] = useState(<Portfolio />);
+  const [currentClass, setCurrentClass] = useState("filter");
   const apps = [
     {
       name: "filter",

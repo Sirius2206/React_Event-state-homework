@@ -8,6 +8,12 @@ body {
 
     padding: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     background-color: chocolate;
+}
+
+.header_main button {
+    padding: 10px 20px;
+    box-shadow: 10px 10px 10px 2px  rgb(153, 78, 25);
+    cursor: pointer;
 }

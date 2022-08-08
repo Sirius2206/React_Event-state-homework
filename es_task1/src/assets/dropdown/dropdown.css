@@ -28,30 +28,13 @@
     overflow: hidden;
     cursor: pointer;
 }
-.dropdown-button span {
-    z-index: 2;
-}
 
 .material-icons_small {
     font-size: 1.5rem;
     background-color: #5380F7;
-    border-radius: 50%;
+    border-radius: 100%;
     border: 5px solid #9db7ff;
-    
-    z-index: 2;
-}
-
-.wrapper {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    right: -27px;
-    background-color: #7fa0fa;
-    
-    border-radius: 50%;
-    border: 25px solid #9db7ff;
-    outline: 35px solid #9db7ff49;
-    z-index: 1;
+    animation: ripple 0.6s linear infinite;
 }
 
 .dropdown-list {
@@ -91,4 +74,13 @@
     left: 15px;
     border: 7px solid transparent;
     border-bottom-color: white;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
 }

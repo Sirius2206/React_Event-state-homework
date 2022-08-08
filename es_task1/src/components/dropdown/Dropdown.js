@@ -12,7 +12,6 @@ import "../../assets/dropdown/dropdown.css"
             <button className="dropdown-button" onClick={handleClick}>
                 <span>Account settings</span>
                 <i className="material-icons material-icons_small">public</i>
-                <div className="wrapper" />
                 </button>
             <DropdownList visible={visible} />
         </div>
